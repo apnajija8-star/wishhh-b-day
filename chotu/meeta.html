@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Happy Birthday, To my chota DON 🎉</title>
+
+    <meta name="description"
+        content="A little surprise made just for you — Happy Birthday!" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styeles.css">
+  
+</head>
+
+
+ 
+
+    <!-- ============================= -->
+    <!-- Floating Background Canvas -->
+    <!-- ============================= -->
+
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Stars -->
+
+    <div class="stars"></div>
+    <div class="stars stars2"></div>
+
+    <!-- ============================= -->
+    <!-- Background Music -->
+    <!-- ============================= -->
+
+    <audio
+        id="birthdayMusic"
+        loop
+        src="Video Project 1.m4a">
+    </audio>
+
+    <!-- ============================= -->
+    <!-- Music Button -->
+    <!-- ============================= -->
+
+    <button id="musicBtn" class="music-btn">
+
+        <i class="fa-solid fa-volume-xmark"></i>
+
+    </button>
+
+    <!-- ============================= -->
+    <!-- Confetti Layer -->
+    <!-- ============================= -->
+
+    <div id="confettiContainer"></div>
+
+    <!-- ============================= -->
+    <!-- Floating Emoji Layer -->
+    <!-- ============================= -->
+
+    <div id="emojiContainer"></div>
+
+    <!-- ============================= -->
+    <!-- Main Wrapper -->
+    <!-- ============================= -->
+
+    <main class="wrapper">
+
+        <!-- ====================== -->
+        <!-- Gift Screen -->
+        <!-- ====================== -->
+
+        <section id="giftScreen" class="gift-screen">
+
+            <div class="gift-box">
+
+                <div class="gift-icon">
+
+                    <i class="fa-solid fa-gift"></i>
+
+                    <span class="sparkle sparkle1">
+                        ✨
+                    </span>
+
+                    <span class="sparkle sparkle2">
+                        ✨
+                    </span>
+
+                    <span class="sparkle sparkle3">
+                        ✨
+                    </span>
+
+                </div>
+
+                <h2 class="gift-title">
+
+                    A little surprise for you...
+
+                </h2>
+
+                <p class="gift-text">
+
+                    Someone prepared something special.
+
+                    <br>
+
+                    Ready to open it?
+
+                </p>
+
+                <button
+                    id="openGiftBtn"
+                    class="open-btn">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    <span>
+
+                        Open Your Gift
+
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =================================== -->
+        <!-- Birthday Page (Hidden Initially) -->
+        <!-- =================================== -->
+
+        <section
+            id="birthdayPage"
+            class="birthday-page hidden">
+
+            <!-- Hero -->
+
+            <header class="hero">
+
+                <p class="hero-small">
+
+                    To My meethu aalu 💖
+
+                </p>
+
+                <h1 class="hero-title">
+
+                    Happy Birthday
+
+                </h1>
+
+                <div class="cake-area">
+
+                    <div class="cake-icon">
+
+                        🎂
+
+                    </div>
+
+                    <div class="flame"></div>
+
+                </div>
+
+                <!-- Rotating Message -->
+
+                <div class="message-box">
+
+                    <p id="rotatingMessage">
+
+                        You are  the sparkle in every room ✨
+
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- ======================= -->
+            <!-- Letter Card -->
+            <!-- ======================= -->
+
+            <section
+                class="letter-card"
+                id="letterCard">
+
+                <div class="card-badge">
+
+                    Just For You
+
+                </div>
+
+                <div class="letter-content">
+
+                    <p>
+                        On your special day, I just wanted to remind you that we meet 
+                        at that day and I appeare on front and in life of you .
+
+                        to be happy all the time if not then i will be there,
+                        every late-night conversation,
+                        every crazy memory,
+                        and every moment that made life brighter.
+
+                    </p>
+
+                    <br>
+
+                        I hope this year brings you endless happiness,
+                        success,
+                        peace,
+                        good health,
+                        and lots of unforgettable adventures to 
+                        <br>MY MEETHA AALU</br>.
+
+                    </p>
+
+                    <h3>
+
+                        Your jaan ❤️
+
+                    </h3>
+
+                </div>
+
+            </section>
+
+            <!-- Slideshow Starts Here -->
+                         <!-- ================================= -->
+            <!-- Slideshow Section -->
+            <!-- ================================= -->
+
+            <section
+                id="slideshowSection"
+                class="slideshow-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        kuch bate 💖
+                    </h2>
+
+                    <p>
+                        A tiny gallery of us — and many more memories to come.
+                    </p>
+
+                </div>
+
+                <div class="slideshow">
+
+                    <!-- Previous Button -->
+
+                    <button
+                        class="slide-btn prev"
+                        id="prevSlide">
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+                    <!-- Next Button -->
+
+                    <button
+                        class="slide-btn next"
+                        id="nextSlide">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                    <!-- ===================== -->
+                    <!-- Slides Wrapper -->
+                    <!-- ===================== -->
+
+                    <div class="slides">
+
+                        <!-- Slide 1 -->
+
+                        <div class="slide active">
+
+                            <img
+                                src="img1.png"
+                                alt="Memory 1">
+
+                            <div class="caption">
+
+                                <h3>
+
+                                    youuu & meeee
+
+                                </h3>
+
+                                <p>
+
+                                    Golden hours are always brighter
+                                    with you around.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Slide 2 -->
+
+                        <div class="slide">
+
+                            <img
+                                src="img2.png"
+                                alt="Memory 2">
+
+                            <div class="caption">
+
+                                <h3>
+
+                                    somethings
+
+                                </h3>
+
+                                <p>
+
+                                    Every small outing becomes
+                                    a beautiful memory.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Slide 3 -->
+
+                        <div class="slide">
+
+                            <img
+                                src="img3.png"
+                                alt="Memory 3">
+
+                            <div class="caption">
+
+                                <h3>
+
+                                    Make A Wish
+
+                                </h3>
+
+                                <p>
+
+                                    May every candle light
+                                    a new dream.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Slide 4 -->
+
+                        <div class="slide">
+
+                            <img
+                                src="img4.png"
+                                alt="Memory 4">
+
+                            <div class="caption">
+
+                                <h3>
+
+                                    sweet
+
+                                </h3>
+
+                                <p>
+
+                                    Two cups,
+                                    endless conversations,
+                                    zero judgement.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Slide 5 -->
+
+                        <div class="slide">
+
+                            <img
+                                src="img5.png"
+                                alt="Memory 5">
+
+                            <div class="caption">
+
+                                <h3>
+
+                                    Under the love of tree
+
+                                </h3>
+
+                                <p>
+
+                                    Here's to more late-night talks
+                                    and crazy adventures.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====================== -->
+                    <!-- Dots -->
+                    <!-- ====================== -->
+
+                    <div class="dots">
+
+                        <span class="dot active"></span>
+
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+
+                    </div>
+
+                    <!-- ====================== -->
+                    <!-- Play Pause -->
+                    <!-- ====================== -->
+
+                    <button
+                        id="playPause"
+                        class="play-btn">
+
+                        <i class="fa-solid fa-pause"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =============================== -->
+            <!-- Surprise Button -->
+            <!-- =============================== -->
+
+            <section class="surprise-section">
+
+                <button
+                    id="surpriseBtn"
+                    class="surprise-btn">
+
+                    🎉 something more you...
+
+                </button>
+
+            </section>
+                        <!-- ================================= -->
+            <!-- Floating Decorations -->
+            <!-- ================================= -->
+<section class="floating-decoration">
+    <div class="floating-item heart">❤️</div>
+    <div class="floating-item love">💖</div>
+    <div class="floating-item rose">🌹</div>
+    <div class="floating-item flower">🌸</div>
+    <div class="floating-item star">⭐</div>
+    <div class="floating-item ribbon">🎀</div>
+</section>
+
+            <!-- ================================= -->
+            <!-- Birthday Wishes Timeline -->
+            <!-- ================================= -->
+
+            <section class="timeline">
+
+                <div class="timeline-title">
+
+                    <h2>Birthday Wishes 💝</h2>
+
+                    <p>
+                        Some little wishes just for you...
+                    </p>
+
+                </div>
+
+                <div class="timeline-container">
+
+                    <div class="wish-card">
+
+                        <span class="wish-icon">🌸</span>
+
+                        <h3>Stay Happy my love</h3>
+
+                        <p>
+                            May your smile always shine brighter
+                            than your past.
+                        </p>
+
+                    </div>
+
+                    <div class="wish-card">
+
+                        <span class="wish-icon">🎂</span>
+
+                        <h3>Dream Big</h3>
+
+                        <p>
+                            May every birthday bring you one
+                            step closer to your biggest dreams.
+                        </p>
+
+                    </div>
+
+                    <div class="wish-card">
+
+                        <span class="wish-icon">🎈</span>
+
+                        <h3>Keep Smiling</h3>
+
+                        <p>
+                            Never lose the child inside you.
+                            Your smile like a tamatar.
+                        </p>
+
+                    </div>
+
+                    <div class="wish-card">
+
+                        <span class="wish-icon">💖</span>
+
+                        <h3>Stay Amazing</h3>
+
+                        <p>
+                            You're already wonderful.
+                            Never stop being yourself.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ================================= -->
+            <!-- Quote Section -->
+            <!-- ================================= -->
+
+            <section class="quote-section">
+
+                <div class="quote-box">
+
+                    <i class="fa-solid fa-quote-left"></i>
+
+                    <p>
+
+                      You’re the one who makes my ordinary moments feel extraordinary
+                      . ❤️ Happy Birthday, my love! 🎂🫶
+
+
+                    </p>
+
+                    <h4>
+
+                        — Happy Birthday aalu ❤️
+
+                    </h4>
+
+                </div>
+
+            </section>
+
+            <!-- ================================= -->
+            <!-- Memory Counter -->
+            <!-- ================================= -->
+
+            <section class="counter-section">
+
+                <div class="counter-box">
+
+                    <div class="counter">
+
+                        <h2 id="memoryCounter">
+
+                            0
+
+                        </h2>
+
+                        <p>
+
+                            Beautiful Memories
+
+                        </p>
+
+                    </div>
+
+                    <div class="counter">
+
+                        <h2 id="laughCounter">
+
+                            0
+
+                        </h2>
+
+                        <p>
+
+                            Endless Laughs
+
+                        </p>
+
+                    </div>
+
+                    <div class="counter">
+
+                        <h2 id="friendCounter">
+
+                            1
+
+                        </h2>
+
+                        <p>
+
+                            Irreplaceable special person
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ================================= -->
+            <!-- Final Thank You -->
+            <!-- ================================= -->
+
+            <section class="ending-section">
+
+                <h2>
+
+                    Thanku 🌸
+
+                </h2>
+
+                <p>
+Thank you for that little smile and 
+for everything you gave me,
+ jo shayad kabhi mujhe mil nahi paya tha. ❤️
+Aur last mein bas itna bolunga…
+ kya aap ready ho mere saath rehne ke liye,
+  aur mujhe jeena sikhane ke liye? 🫶
+
+
+                </p>
+
+                <h3>
+
+                    Happy Birthday Once Again aalu 🎂🎉
+
+                </h3>
+
+            </section>
+                        <!-- ================================= -->
+            <!-- Floating Decorations -->
+            <!-- ================================= -->
+<section class="floating-decoration">
+    <div class="floating-item heart">❤️</div>
+    <div class="floating-item love">💖</div>
+    <div class="floating-item rose">🌹</div>
+    <div class="floating-item flower">🌸</div>
+    <div class="floating-item star">⭐</div>
+    <div class="floating-item ribbon">🎀</div>
+</section>
+
+            
+          
+        </section>
+    </main>
+    <script src="java.js"></script>
+    
+  </body>
+</html>    

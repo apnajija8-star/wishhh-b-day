@@ -1,0 +1,2547 @@
+/* ===========================================
+   Google Fonts
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* ===========================================
+   Reset
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Quicksand',sans-serif;
+    overflow-x:hidden;
+    color:#4d2142;
+    background:#fff0f6;
+    position:relative;
+
+}
+.background span{
+    position:absolute;
+    font-size:35px;
+    opacity:0.25;
+    animation: floatHeart 10s linear infinite;
+    user-select:none;
+}
+
+
+
+/* ===========================================
+   Selection
+=========================================== */
+
+::selection{
+    background:#ff4fa2;
+    color:#fff;
+}
+
+/* ===========================================
+   Scrollbar
+=========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffe6f2;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #ff6bb5,
+        #ff4f9d
+    );
+
+    border-radius:50px;
+}
+
+/* ===========================================
+   Background
+=========================================== */
+
+body{
+
+    background:
+
+    radial-gradient(circle at 20% 10%,
+    #ffd6ec 0%,
+    transparent 38%),
+
+    radial-gradient(circle at 80% 20%,
+    #fde4dd 0%,
+    transparent 40%),
+
+    radial-gradient(circle at 50% 100%,
+    #f7ccc3 0%,
+    transparent 45%),
+
+    linear-gradient(
+        135deg,
+        #fff1f8,
+        #ffe6f1,
+        #fde9f6
+    );
+
+    background-size:200% 200%;
+
+}
+
+/* ===========================================
+   Canvas
+=========================================== */
+
+#bgCanvas{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-3;
+    pointer-events:none;
+
+}
+
+/* ===========================================
+   Stars Layer
+=========================================== */
+
+.stars,
+.stars2{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(#ffffff 1px,transparent 1px),
+    radial-gradient(#ffd3ea 1.5px,transparent 1.5px),
+    radial-gradient(#ffffff 2px,transparent 2px);
+
+    background-size:
+    180px 180px,
+    260px 260px,
+    320px 320px;
+
+    opacity:.55;
+
+    z-index:-2;
+
+}
+
+.stars2{
+
+    opacity:.30;
+
+    transform:scale(1.2);
+
+}
+
+/* ===========================================
+   Wrapper
+=========================================== */
+
+.wrapper{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    padding:70px 25px;
+
+}
+
+/* ===========================================
+   Hidden
+=========================================== */
+
+.hidden{
+    display:none;
+}
+
+/* ===========================================
+   Music Button
+=========================================== */
+
+.music-btn{
+
+    position:fixed;
+
+    top:25px;
+    right:25px;
+
+    width:58px;
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    color:#ff3f92;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+
+    0 10px 30px rgba(255,105,180,.25);
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.music-btn:hover{
+
+    transform:scale(1.08);
+
+    background:white;
+
+}
+
+/* ===========================================
+   Gift Screen
+=========================================== */
+
+.gift-screen{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.gift-box{
+
+    max-width:650px;
+
+    background:
+
+    rgba(255,255,255,.60);
+
+    backdrop-filter:blur(18px);
+
+    padding:70px 50px;
+
+    border-radius:35px;
+
+    box-shadow:
+
+    0 30px 60px
+    rgba(255,105,180,.25);
+
+}
+
+.gift-icon{
+
+    position:relative;
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ff73ba,
+    #ff4fa2
+    );
+
+    color:#fff;
+
+    font-size:70px;
+
+    margin-bottom:35px;
+
+}
+
+.sparkle{
+
+    position:absolute;
+
+    font-size:22px;
+
+}
+
+.sparkle1{
+
+    top:-12px;
+    right:8px;
+
+}
+
+.sparkle2{
+
+    left:-5px;
+    bottom:20px;
+
+}
+
+.sparkle3{
+
+    right:-8px;
+    bottom:10px;
+
+}
+
+/* ===========================================
+   Gift Text
+=========================================== */
+
+.gift-title{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3rem;
+
+    color:#ff2d87;
+
+    margin-bottom:18px;
+
+}
+
+.gift-text{
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:#6f4161;
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================================
+   Open Button
+=========================================== */
+
+.open-btn{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:
+
+    18px 45px;
+
+    border-radius:60px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #ff5ca8,
+    #ff3d96,
+    #b84fff
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    display:inline-flex;
+
+    gap:14px;
+
+    align-items:center;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 18px 40px
+    rgba(255,80,150,.35);
+
+}
+
+.open-btn:hover{
+
+    transform:
+
+    translateY(-5px)
+    scale(1.04);
+
+}
+
+/* ===========================================
+   Birthday Page
+=========================================== */
+
+.birthday-page{
+
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ===========================================
+   Hero
+=========================================== */
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.hero-small{
+
+    font-family:
+
+    'Dancing Script',
+    cursive;
+
+    font-size:2rem;
+
+    color:#ff58a8;
+
+    margin-bottom:20px;
+
+}
+
+.hero-title{
+
+    font-family:
+    'Dancing Script',
+    cursive;
+
+    font-size:6rem;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #ff3d96,
+    #ff5bb6,
+    #a855f7
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================================
+   Cake
+=========================================== */
+
+.cake-area{
+
+    margin:30px auto;
+
+}
+
+.cake-icon{
+
+    font-size:90px;
+
+}
+
+.flame{
+
+    width:12px;
+    height:20px;
+
+    margin:auto;
+
+    background:
+
+    radial-gradient(
+    circle,
+    #fff6a0,
+    orange,
+    #ff5722
+    );
+
+    border-radius:50%;
+
+}
+
+/* ===========================================
+   Message Box
+=========================================== */
+
+.message-box{
+
+    margin-top:40px;
+
+}
+
+.message-box p{
+
+    font-size:2rem;
+
+    font-family:
+    'Dancing Script',
+    cursive;
+
+    color:#ff3f93;
+
+}
+/* ===========================================
+   LETTER CARD
+=========================================== */
+
+.letter-card{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:70px auto;
+
+    padding:70px 55px;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:35px;
+
+    box-shadow:
+    0 25px 60px rgba(255,105,180,.18);
+
+    overflow:hidden;
+
+}
+
+.card-badge{
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:10px 25px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #ff4f9f,
+        #c84fff
+    );
+
+    color:#fff;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.letter-content{
+
+    text-align:center;
+
+}
+
+.letter-content p{
+
+    font-size:1.2rem;
+
+    line-height:2.1;
+
+    color:#69435f;
+
+    margin-bottom:25px;
+
+}
+
+.letter-content h3{
+
+    margin-top:25px;
+
+    font-size:2.5rem;
+
+    color:#ff4799;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+/* ===========================================
+   SECTION TITLE
+=========================================== */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.section-heading h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3.5rem;
+
+    color:#ff4f9e;
+
+}
+
+.section-heading p{
+
+    margin-top:10px;
+
+    color:#84536e;
+
+    font-size:1.05rem;
+
+}
+
+/* ===========================================
+   SLIDESHOW
+=========================================== */
+
+.slideshow{
+
+    position:relative;
+
+    max-width:1000px;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:
+    0 25px 70px rgba(255,105,180,.25);
+
+}
+
+.slides{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    overflow:hidden;
+
+}
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.8s;
+
+}
+
+.slide.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.slide img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* ===========================================
+   CAPTION
+=========================================== */
+
+.caption{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    padding:50px 35px 35px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(90,0,40,.88)
+    );
+
+    color:white;
+
+}
+
+.caption h3{
+
+    font-size:2.3rem;
+
+    font-family:'Dancing Script',cursive;
+
+    margin-bottom:10px;
+
+}
+
+.caption p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================
+   PREV / NEXT
+=========================================== */
+
+.slide-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    color:#ff3c92;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.slide-btn:hover{
+
+    transform:
+    translateY(-50%)
+    scale(1.1);
+
+}
+
+.prev{
+
+    left:20px;
+
+}
+
+.next{
+
+    right:20px;
+
+}
+
+/* ===========================================
+   PLAY BUTTON
+=========================================== */
+
+.play-btn{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.8);
+
+    color:#ff4c9f;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    z-index:20;
+
+}
+
+/* ===========================================
+   DOTS
+=========================================== */
+
+.dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.7);
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#ffc2df;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.dot.active{
+
+    width:34px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        90deg,
+        #ff4d9d,
+        #b64cff
+    );
+
+}
+
+/* ===========================================
+   SURPRISE BUTTON
+=========================================== */
+
+.surprise-section{
+
+    text-align:center;
+
+    margin:70px 0;
+
+}
+
+.surprise-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:18px 40px;
+
+    border-radius:60px;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        90deg,
+        #ff5ba8,
+        #ff3c92,
+        #b44cff
+    );
+
+    box-shadow:
+    0 18px 40px rgba(255,90,170,.3);
+
+    transition:.35s;
+
+}
+
+.surprise-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+}
+
+/* ===========================================
+   FLOATING EMOJIS
+=========================================== */
+
+.floating-decoration{
+
+    position:relative;
+
+    width:100%;
+
+    height:180px;
+
+    margin:60px 0;
+
+    overflow:hidden;
+
+}
+
+.floating-item{
+
+    position:absolute;
+
+    font-size:40px;
+
+}
+
+.cat{left:5%;top:50px;}
+.fish{left:20%;top:90px;}
+.butterfly{left:40%;top:20px;}
+.flower{left:60%;top:110px;}
+.star{left:80%;top:35px;}
+.ribbon{left:92%;top:95px;}
+/* ===========================================
+   TIMELINE SECTION
+=========================================== */
+
+.timeline{
+
+    width:100%;
+
+    margin:100px auto;
+
+}
+
+.timeline-title{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.timeline-title h2{
+
+    font-size:3.2rem;
+
+    color:#ff4f9d;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+.timeline-title p{
+
+    color:#7d5870;
+
+    margin-top:12px;
+
+    font-size:1.05rem;
+
+}
+
+.timeline-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.wish-card{
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(16px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 15px 35px rgba(255,120,180,.18);
+
+}
+
+.wish-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.wish-icon{
+
+    display:block;
+
+    font-size:50px;
+
+    margin-bottom:18px;
+
+}
+
+.wish-card h3{
+
+    margin-bottom:15px;
+
+    color:#ff4598;
+
+    font-size:1.5rem;
+
+}
+
+.wish-card p{
+
+    color:#705368;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================
+   QUOTE SECTION
+=========================================== */
+
+.quote-section{
+
+    margin:100px auto;
+
+}
+
+.quote-box{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:60px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+
+    0 20px 45px rgba(255,105,180,.18);
+
+}
+
+.quote-box i{
+
+    font-size:60px;
+
+    color:#ff4d9d;
+
+    margin-bottom:25px;
+
+}
+
+.quote-box p{
+
+    font-size:1.4rem;
+
+    line-height:2;
+
+    color:#6e4861;
+
+}
+
+.quote-box h4{
+
+    margin-top:25px;
+
+    color:#ff4297;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:2rem;
+
+}
+
+/* ===========================================
+   COUNTER SECTION
+=========================================== */
+
+.counter-section{
+
+    margin:90px auto;
+
+}
+
+.counter-box{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+.counter{
+
+    width:250px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.70);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+
+    0 15px 35px rgba(255,100,170,.18);
+
+}
+
+.counter h2{
+
+    font-size:3rem;
+
+    color:#ff4196;
+
+    margin-bottom:10px;
+
+}
+
+.counter p{
+
+    color:#6e4d62;
+
+}
+
+/* ===========================================
+   ENDING SECTION
+=========================================== */
+
+.ending-section{
+
+    text-align:center;
+
+    margin:120px auto;
+
+}
+
+.ending-section h2{
+
+    font-size:4rem;
+
+    color:#ff4c9d;
+
+    font-family:'Dancing Script',cursive;
+
+    margin-bottom:25px;
+
+}
+
+.ending-section p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:2;
+
+    color:#755368;
+
+    font-size:1.2rem;
+
+}
+
+.ending-section h3{
+
+    margin-top:40px;
+
+    font-size:2.7rem;
+
+    color:#ff4a98;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.footer{
+
+    margin-top:120px;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ff72b7,
+        #ff4f9f,
+        #c04dff
+    );
+
+    color:#fff;
+
+}
+
+.footer h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.footer p{
+
+    line-height:2;
+
+    max-width:700px;
+
+    margin:10px auto;
+
+}
+
+.footer-love{
+
+    margin-top:20px;
+
+    font-size:1.1rem;
+
+    opacity:.9;
+
+}
+
+/* ===========================================
+   SCROLL TO TOP
+=========================================== */
+
+.scroll-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:#ff4c9d;
+
+    color:#fff;
+
+    font-size:20px;
+
+    box-shadow:
+
+    0 12px 30px rgba(255,90,170,.35);
+
+    display:none;
+
+    z-index:999;
+
+}
+
+/* ===========================================
+   LOADER
+=========================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#fff0f6;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-heart{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.hero-title{
+
+font-size:4.5rem;
+
+}
+
+.gift-box{
+
+padding:50px 30px;
+
+}
+
+.letter-card{
+
+padding:50px 30px;
+
+}
+
+.quote-box{
+
+padding:40px 25px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-title{
+
+font-size:3.5rem;
+
+}
+
+.hero-small{
+
+font-size:1.5rem;
+
+}
+
+.gift-title{
+
+font-size:2.3rem;
+
+}
+
+.section-heading h2{
+
+font-size:2.6rem;
+
+}
+
+.timeline-title h2{
+
+font-size:2.6rem;
+
+}
+
+.ending-section h2{
+
+font-size:3rem;
+
+}
+
+.counter{
+
+width:100%;
+
+}
+
+.slide-btn{
+
+width:45px;
+height:45px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.wrapper{
+
+padding:40px 18px;
+
+}
+
+.gift-box{
+
+padding:40px 20px;
+
+}
+
+.hero-title{
+
+font-size:2.8rem;
+
+}
+
+.message-box p{
+
+font-size:1.5rem;
+
+}
+
+.caption{
+
+padding:30px 20px;
+
+}
+
+.caption h3{
+
+font-size:1.8rem;
+
+}
+
+.footer h2{
+
+font-size:2.3rem;
+
+}
+
+}
+/* ===========================================
+   animations.css
+===========================================*/
+
+/* ===========================================
+   BACKGROUND ANIMATION
+=========================================== */
+
+@keyframes bgShift{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ===========================================
+   FLOATING GIFT
+=========================================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:
+        translateY(0)
+        rotate(-3deg);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-18px)
+        rotate(3deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0)
+        rotate(-3deg);
+
+    }
+
+}
+
+.gift-icon{
+
+    animation:
+    float 3s ease-in-out infinite;
+
+}
+
+/* ===========================================
+   TWINKLING STARS
+=========================================== */
+
+@keyframes twinkle{
+
+    from{
+
+        opacity:.25;
+
+    }
+
+    to{
+
+        opacity:.8;
+
+    }
+
+}
+
+.stars{
+
+    animation:
+    twinkle 4s ease-in-out infinite alternate;
+
+}
+
+.stars2{
+
+    animation:
+    twinkle 7s ease-in-out infinite alternate;
+
+}
+
+/* ===========================================
+   SPARKLES
+=========================================== */
+
+@keyframes sparkle{
+
+    0%{
+
+        transform:
+        scale(.8)
+        rotate(0deg);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:
+        scale(1.35)
+        rotate(180deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        scale(.8)
+        rotate(360deg);
+
+        opacity:.4;
+
+    }
+
+}
+
+.sparkle{
+
+    animation:
+    sparkle 2.4s linear infinite;
+
+}
+
+.sparkle2{
+
+    animation-delay:.6s;
+
+}
+
+.sparkle3{
+
+    animation-delay:1.2s;
+
+}
+
+/* ===========================================
+   SHINE TITLE
+=========================================== */
+
+@keyframes shine{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:300%;
+
+    }
+
+}
+
+.hero-title{
+
+    background-size:300%;
+
+    animation:
+    shine 5s linear infinite;
+
+}
+
+/* ===========================================
+   FADE UP
+=========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+.hero,
+.letter-card,
+.timeline,
+.quote-section,
+.counter-section,
+.footer{
+
+    animation:
+    fadeUp 1s ease both;
+
+}
+
+/* ===========================================
+   POP IN
+=========================================== */
+
+@keyframes pop{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        scale(.6);
+
+    }
+
+    70%{
+
+        transform:
+        scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        scale(1);
+
+    }
+
+}
+
+.open-btn,
+.surprise-btn,
+.music-btn{
+
+    animation:
+    pop .8s ease;
+
+}
+
+/* ===========================================
+   BUTTON HOVER
+=========================================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.open-btn:hover,
+.surprise-btn:hover{
+
+    animation:
+    pulse .7s infinite;
+
+}
+
+/* ===========================================
+   CAKE FLAME
+=========================================== */
+
+@keyframes flicker{
+
+    from{
+
+        transform:
+        translateY(0)
+        scale(1)
+        rotate(-4deg);
+
+    }
+
+    to{
+
+        transform:
+        translateY(-2px)
+        scale(1.15)
+        rotate(4deg);
+
+    }
+
+}
+
+.flame{
+
+    animation:
+    flicker .55s ease-in-out infinite alternate;
+
+    box-shadow:
+    0 0 12px orange,
+    0 0 28px #ff9800,
+    0 0 45px #ff5722;
+
+}
+
+/* ===========================================
+   FLOATING EMOJIS
+=========================================== */
+@keyframes floatEmoji {
+
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(3deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+}
+
+.floating-decoration{
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin: 70px 0;
+    overflow: hidden;
+}
+
+.floating-item{
+    position: absolute;
+    font-size: 40px;
+    animation: floatEmoji 4s ease-in-out infinite;
+}
+
+.heart{
+    left:8%;
+    top:95px;
+    animation-duration:3.8s;
+    animation-delay:0s;
+}
+
+.love{
+    left:25%;
+    top:145px;
+    animation-duration:4.5s;
+    animation-delay:.5s;
+}
+
+.rose{
+    left:42%;
+    top:30px;
+    animation-duration:3.6s;
+    animation-delay:1s;
+}
+
+.flower{
+    left:59%;
+    top:150px;
+    animation-duration:4.8s;
+    animation-delay:1.5s;
+}
+
+.star{
+    left:77%;
+    top:40px;
+    animation-duration:3.9s;
+    animation-delay:2s;
+}
+
+.ribbon{
+    left:88%;
+    top:120px;
+    animation-duration:4.3s;
+    animation-delay:2.5s;
+}
+
+/* Animation Delay */
+.heart{ animation-delay:0s; }
+.love{ animation-delay:.5s; }
+.rose{ animation-delay:1s; }
+.flower{ animation-delay:1.5s; }
+.star{ animation-delay:2s; }
+.ribbon{ animation-delay:2.5s; }
+/* ===========================================
+   SLIDE CAPTION
+=========================================== */
+
+@keyframes captionUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+.caption{
+
+    animation:
+    captionUp .8s ease;
+
+}
+
+/* ===========================================
+   COUNTER POP
+=========================================== */
+
+@keyframes counterPop{
+
+    0%{
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.counter{
+
+    animation:
+    counterPop .9s ease both;
+
+}
+
+/* ===========================================
+   CARD HOVER
+=========================================== */
+
+.wish-card,
+.letter-card,
+.quote-box,
+.counter{
+
+    transition:
+    transform .35s,
+    box-shadow .35s;
+
+}
+
+.wish-card:hover,
+.letter-card:hover,
+.quote-box:hover,
+.counter:hover{
+
+    transform:
+    translateY(-8px);
+
+    box-shadow:
+    0 25px 55px rgba(255,90,170,.25);
+
+}
+
+/* ===========================================
+   LOADER
+=========================================== */
+
+@keyframes loaderBeat{
+
+    0%{
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(.8);
+
+    }
+
+}
+
+.loader-heart{
+
+    animation:
+    loaderBeat 1s infinite;
+
+}
+
+/* ===========================================
+   SCROLL TOP
+=========================================== */
+
+.scroll-top{
+
+    transition:
+    transform .35s,
+    background .35s;
+
+}
+
+.scroll-top:hover{
+
+    transform:
+    scale(1.1);
+
+    background:#ff2c86;
+
+}
+/* ===========================================
+   slideshow.css
+=========================================== */
+
+/* ===========================================
+   Slideshow Container
+=========================================== */
+
+.slideshow-section{
+
+    width:100%;
+
+    margin:100px auto;
+
+}
+
+.slideshow{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    box-shadow:
+    0 30px 80px rgba(255,105,180,.25);
+
+}
+
+/* ===========================================
+   Slides Wrapper
+=========================================== */
+
+.slides{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    overflow:hidden;
+
+}
+
+/* ===========================================
+   Single Slide
+=========================================== */
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+    opacity .8s ease,
+    transform 6s ease;
+
+}
+
+.slide.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    z-index:2;
+
+}
+
+/* ===========================================
+   Image
+=========================================== */
+
+.slide img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1.05);
+
+}
+
+.slide.active img{
+
+    animation:kenBurns 7s linear forwards;
+
+}
+
+/* ===========================================
+   Ken Burns
+=========================================== */
+
+@keyframes kenBurns{
+
+    from{
+
+        transform:scale(1.02);
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+/* ===========================================
+   Caption
+=========================================== */
+
+.caption{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    padding:55px 35px 35px;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(70,0,40,.90)
+    );
+
+    color:white;
+
+}
+
+.caption h3{
+
+    font-size:2.5rem;
+
+    font-family:'Dancing Script',cursive;
+
+    margin-bottom:12px;
+
+}
+
+.caption p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================
+   Navigation Buttons
+=========================================== */
+
+.slide-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    color:#ff4d9d;
+
+    font-size:18px;
+
+    z-index:50;
+
+    transition:.35s;
+
+}
+
+.slide-btn:hover{
+
+    background:white;
+
+    transform:
+    translateY(-50%)
+    scale(1.1);
+
+}
+
+.prev{
+
+    left:20px;
+
+}
+
+.next{
+
+    right:20px;
+
+}
+
+/* ===========================================
+   Play Pause
+=========================================== */
+
+.play-btn{
+
+    position:absolute;
+
+    right:20px;
+
+    top:20px;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.8);
+
+    color:#ff4d9d;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(15px);
+
+    transition:.3s;
+
+    z-index:50;
+
+}
+
+.play-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================================
+   Dots
+=========================================== */
+
+.dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:18px;
+
+    background:rgba(255,255,255,.75);
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#ffd2e8;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.dot:hover{
+
+    transform:scale(1.3);
+
+}
+
+.dot.active{
+
+    width:34px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff4d9d,
+        #b44dff
+    );
+
+}
+
+/* ===========================================
+   Hover Effect
+=========================================== */
+
+.slideshow:hover .slide-btn,
+
+.slideshow:hover .play-btn{
+
+    opacity:1;
+
+}
+
+.slide-btn,
+
+.play-btn{
+
+    opacity:.15;
+
+}
+
+/* ===========================================
+   Loading Effect
+=========================================== */
+
+.slide.loading img{
+
+    filter:blur(6px);
+
+}
+
+.slide.active.loading img{
+
+    filter:blur(0);
+
+}
+
+/* ===========================================
+   Mobile
+=========================================== */
+
+@media(max-width:992px){
+
+.caption h3{
+
+font-size:2rem;
+
+}
+
+.caption{
+
+padding:40px 25px 25px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.slide-btn{
+
+width:45px;
+
+height:45px;
+
+font-size:15px;
+
+}
+
+.play-btn{
+
+width:42px;
+
+height:42px;
+
+}
+
+.caption h3{
+
+font-size:1.7rem;
+
+}
+
+.caption p{
+
+font-size:.9rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.slideshow{
+
+border-radius:20px;
+
+}
+
+.caption{
+
+padding:25px 18px 18px;
+
+}
+
+.caption h3{
+
+font-size:1.4rem;
+
+}
+
+.caption p{
+
+font-size:.85rem;
+
+line-height:1.6;
+
+}
+
+.dot{
+
+width:10px;
+
+height:10px;
+
+}
+
+.dot.active{
+
+width:25px;
+
+}
+
+}
